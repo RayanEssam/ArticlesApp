@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "4E217DE6-33CE-4496-8480-F3E91DCA593F"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "71F22A1F-8355-47B8-BB98-1A2E3FD58BEC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ArticlesApp/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "7"
+            endingLineNumber = "7"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "71F22A1F-8355-47B8-BB98-1A2E3FD58BEC - c21e311943829094"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ArticlesApp.ViewController.tableView.getter : Swift.Optional&lt;__C.UITableView&gt;"
+                  moduleName = "ArticlesApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rayantaj/Documents/IOS-Swift%20/ArticlesApp/ArticlesApp/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "7"
+                  endingLineNumber = "7"
+                  offsetFromSymbolStart = "85">
+               </Location>
+               <Location
+                  uuid = "71F22A1F-8355-47B8-BB98-1A2E3FD58BEC - 7110b7ba80c56498"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ArticlesApp.ViewController.tableView.setter : Swift.Optional&lt;__C.UITableView&gt;"
+                  moduleName = "ArticlesApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rayantaj/Documents/IOS-Swift%20/ArticlesApp/ArticlesApp/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "7"
+                  endingLineNumber = "7"
+                  offsetFromSymbolStart = "136">
+               </Location>
+               <Location
+                  uuid = "71F22A1F-8355-47B8-BB98-1A2E3FD58BEC - 4e705745fd95a92"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ArticlesApp.ViewController.tableView.modify : Swift.Optional&lt;__C.UITableView&gt;"
+                  moduleName = "ArticlesApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rayantaj/Documents/IOS-Swift%20/ArticlesApp/ArticlesApp/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "71F22A1F-8355-47B8-BB98-1A2E3FD58BEC - 117b3545a7ef4e06"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ArticlesApp.ViewController.tableView.modify : Swift.Optional&lt;__C.UITableView&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "ArticlesApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rayantaj/Documents/IOS-Swift%20/ArticlesApp/ArticlesApp/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "7"
+                  endingLineNumber = "7"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  uuid = "71F22A1F-8355-47B8-BB98-1A2E3FD58BEC - 7730c22cf906d5f1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ArticlesApp.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; ArticlesApp.ViewController"
+                  moduleName = "ArticlesApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rayantaj/Documents/IOS-Swift%20/ArticlesApp/ArticlesApp/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "7"
+                  endingLineNumber = "7"
+                  offsetFromSymbolStart = "141">
+               </Location>
+               <Location
+                  uuid = "71F22A1F-8355-47B8-BB98-1A2E3FD58BEC - 7269190b6bab2108"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ArticlesApp.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;ArticlesApp.ViewController&gt;"
+                  moduleName = "ArticlesApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rayantaj/Documents/IOS-Swift%20/ArticlesApp/ArticlesApp/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "7"
+                  endingLineNumber = "7"
+                  offsetFromSymbolStart = "98">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
