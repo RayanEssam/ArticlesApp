@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52A3F613274FAD9C00CCE33D /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A3F612274FAD9C00CCE33D /* Article.swift */; };
 		CF9DB553274FA6E900BC8C8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9DB552274FA6E900BC8C8F /* AppDelegate.swift */; };
 		CF9DB555274FA6E900BC8C8F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9DB554274FA6E900BC8C8F /* SceneDelegate.swift */; };
 		CF9DB557274FA6E900BC8C8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9DB556274FA6E900BC8C8F /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52A3F612274FAD9C00CCE33D /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		CF9DB54F274FA6E900BC8C8F /* ArticlesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArticlesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF9DB552274FA6E900BC8C8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF9DB554274FA6E900BC8C8F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			children = (
 				CF9DB552274FA6E900BC8C8F /* AppDelegate.swift */,
 				CF9DB554274FA6E900BC8C8F /* SceneDelegate.swift */,
+				52A3F612274FAD9C00CCE33D /* Article.swift */,
 				CF9DB556274FA6E900BC8C8F /* ViewController.swift */,
 				CF9DB558274FA6E900BC8C8F /* Main.storyboard */,
 				CF9DB55E274FA6EB00BC8C8F /* Assets.xcassets */,
@@ -145,6 +148,7 @@
 				CF9DB557274FA6E900BC8C8F /* ViewController.swift in Sources */,
 				CF9DB553274FA6E900BC8C8F /* AppDelegate.swift in Sources */,
 				CF9DB555274FA6E900BC8C8F /* SceneDelegate.swift in Sources */,
+				52A3F613274FAD9C00CCE33D /* Article.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
