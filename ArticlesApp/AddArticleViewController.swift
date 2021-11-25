@@ -6,9 +6,9 @@
 //
 
 import UIKit
-
+import CoreData
 class AddArticleViewController: UIViewController {
-
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     //IBOutlets
     @IBOutlet weak var titleField: UITextField!
     @IBOutlet weak var aritcleDetails: UITextField!
@@ -24,6 +24,17 @@ class AddArticleViewController: UIViewController {
 //        natureOutlet.layer.borderColor = UIColor.black
        
     }
+    //Functions
+    func reloadData() {
+        let request = Article.fetchRequest()
+    }
+    func saveData() {
+        do {
+            try context.save()
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
     
     //IBActions
     @IBAction func natureButton(_ sender: Any) {
@@ -33,19 +44,15 @@ class AddArticleViewController: UIViewController {
     @IBAction func iosButton(_ sender: Any) {
     }
     @IBAction func createButton(_ sender: Any) {
+        if titleField.text?.isEmpty ==  true {
+            
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
-
+enum Category {
+    case nature
+    case fitness
+    case ios
+}
