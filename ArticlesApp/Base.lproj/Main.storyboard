@@ -23,10 +23,10 @@
             </objects>
             <point key="canvasLocation" x="139" y="121"/>
         </scene>
-        <!--View Controller-->
+        <!--Article View Controller-->
         <scene sceneID="SaP-bT-qx5">
             <objects>
-                <viewController id="gGq-DJ-RRB" sceneMemberID="viewController">
+                <viewController id="gGq-DJ-RRB" customClass="ArticleViewController" customModule="ArticlesApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0CY-jh-zgB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -127,6 +127,12 @@
                             <constraint firstItem="ZDG-N9-RUc" firstAttribute="trailing" secondItem="t2b-H1-hiu" secondAttribute="trailing" id="tDZ-dd-hhO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="articleContentTextView" destination="NEz-VR-H3F" id="LEa-Ot-UPw"/>
+                        <outlet property="articleName" destination="kgW-c2-nNa" id="jUz-j4-ZNm"/>
+                        <outlet property="categoryLabel" destination="K5p-xl-dIl" id="qyn-Vh-RxA"/>
+                        <outlet property="timeLabel" destination="Ois-Te-EaX" id="1gM-IB-ODW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tuT-9v-Phe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
