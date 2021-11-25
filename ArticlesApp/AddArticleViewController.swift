@@ -17,20 +17,34 @@ class AddArticleViewController: UIViewController {
     @IBOutlet weak var iosOutlet: UIButton!
     @IBOutlet weak var createOutlet: UIButton!
     
+    var categoryType : Category = .nature
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        natureOutlet.layer.cornerRadius = 20
+        natureOutlet.layer.cornerRadius = 15
         natureOutlet.layer.borderWidth = 1
-//        natureOutlet.layer.borderColor = UIColor.black
-       
+        natureOutlet.layer.borderColor = UIColor.purple.cgColor
+        fitnessOutlet.layer.cornerRadius = 15
+        fitnessOutlet.layer.borderWidth = 1
+        fitnessOutlet.layer.borderColor = UIColor.purple.cgColor
+        iosOutlet.layer.cornerRadius = 15
+        iosOutlet.layer.borderWidth = 1
+        iosOutlet.layer.borderColor = UIColor.purple.cgColor
+        createOutlet.layer.cornerRadius = 15
     }
     //Functions
-    func reloadData() {
-        let request = Article.fetchRequest()
+    func addData(articleName: String, aritcleDetails: String, category: String) {
+        let coreData = Article(context: context)
+        coreData.content = aritcleDetails
+        coreData.articlename = articleName
+        coreData.category = category
+        saveData()
     }
+    
     func saveData() {
         do {
             try context.save()
+            print("Done")
         } catch {
             print(error.localizedDescription)
         }
@@ -38,20 +52,32 @@ class AddArticleViewController: UIViewController {
     
     //IBActions
     @IBAction func natureButton(_ sender: Any) {
+        categoryType = .nature
     }
     @IBAction func fitnessButton(_ sender: Any) {
+        categoryType = .fitness
     }
     @IBAction func iosButton(_ sender: Any) {
+        categoryType = .ios
     }
     @IBAction func createButton(_ sender: Any) {
-        if titleField.text?.isEmpty ==  true {
+        if let name = titleField.text {
+            
+            if let content = aritcleDetails.text {
+                
+                
+                addData(articleName: name, aritcleDetails: content, category: categoryType.rawValue)
+                
+                
+            }
+            
             
         }
     }
     
 }
 
-enum Category {
+enum Category: String {
     case nature
     case fitness
     case ios

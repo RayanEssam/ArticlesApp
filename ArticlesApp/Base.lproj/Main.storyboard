@@ -299,7 +299,7 @@
                                 <color key="textColor" red="0.25440835950000001" green="0.33030271529999999" blue="0.87063497300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="  example. Far far away. behind the." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bFp-ch-sHG">
+                            <textField opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="  example. Far far away. behind the." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bFp-ch-sHG">
                                 <rect key="frame" x="61" y="93" width="304" height="105"/>
                                 <color key="backgroundColor" red="0.9413606524" green="0.94867748019999998" blue="0.96863025430000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -307,7 +307,7 @@
                                     <constraint firstAttribute="height" constant="105" id="HYm-t5-4jI"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Article" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="orW-5D-b5L">
                                 <rect key="frame" x="61" y="241" width="96" height="21"/>
@@ -315,7 +315,7 @@
                                 <color key="textColor" red="0.25440835950000001" green="0.33030271529999999" blue="0.87063497300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="  Enter your article here." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qp4-Ne-BdC">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="jjj" borderStyle="roundedRect" placeholder="  Enter your article here." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qp4-Ne-BdC">
                                 <rect key="frame" x="61" y="268" width="298" height="400"/>
                                 <color key="backgroundColor" red="0.9413606524" green="0.94867748019999998" blue="0.96863025430000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
