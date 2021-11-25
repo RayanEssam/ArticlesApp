@@ -4,9 +4,8 @@
         <attribute name="articlename" attributeType="String"/>
         <attribute name="category" attributeType="String"/>
         <attribute name="content" optional="YES" attributeType="String"/>
-        <attribute name="creation" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
     <elements>
-        <element name="Article" positionX="-63" positionY="-18" width="128" height="89"/>
+        <element name="Article" positionX="-63" positionY="-18" width="128" height="74"/>
     </elements>
 </model>
