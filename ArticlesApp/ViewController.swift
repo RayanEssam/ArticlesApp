@@ -8,10 +8,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     
-    @IBOutlet weak var collictionView: UICollectionView!
     
-    
-    
+    var arrayOFF : [String] = ["1","2","3","4","5"]
 
     
     
@@ -23,7 +21,7 @@ class ViewController: UIViewController {
         
         super.viewDidLoad()
         
-      //  reloadData()
+        reloadData()
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -51,7 +49,7 @@ class ViewController: UIViewController {
 
 }
 
-extension ViewController : UITableViewDelegate , UITableViewDataSource ,  UICollectionViewDataSource , UICollectionViewDelegate {
+extension ViewController : UITableViewDelegate , UITableViewDataSource {
 
     // Table View *****
     
@@ -71,23 +69,6 @@ extension ViewController : UITableViewDelegate , UITableViewDataSource ,  UIColl
         
         
         return cellTableView
-    }
-    
-    
-    // Colliction View *****
-
-
-
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        arrayOfArticle.count
-    }
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let cell = collictionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCellid", for: indexPath) as! CollectionViewCell
-        
-        return cell
-        
     }
 
 }
