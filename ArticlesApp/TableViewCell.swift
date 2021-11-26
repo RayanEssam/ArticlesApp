@@ -7,7 +7,6 @@ class TableViewCell: UITableViewCell {
     
     @IBOutlet weak var text2TableView: UILabel!
     
-    @IBOutlet weak var text3TableView: UILabel!
     
     
     

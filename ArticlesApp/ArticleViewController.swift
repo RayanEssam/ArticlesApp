@@ -18,10 +18,17 @@ class ArticleViewController: UIViewController {
     @IBOutlet weak var articleContentTextView: UITextView!
     
     
+    var articleNameString : String = ""
+    var categoryLabelString : String = ""
+    var contentString : String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+
+        articleName.text = articleNameString
+        categoryLabel.text = categoryLabelString
+        articleContentTextView.text = contentString
     }
     
 

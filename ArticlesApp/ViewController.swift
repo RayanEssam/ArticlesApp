@@ -2,15 +2,14 @@ import UIKit
 import CoreData
 
 class ViewController: UIViewController {
-
     
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var segument: UISegmentedControl!
     
     
-    var arrayOFF : [String] = ["1","2","3","4","5"]
-
+    @IBOutlet weak var addButton: UIButton!
     
     
     var arrayOfArticle : [Article] = [Article]()
@@ -25,6 +24,7 @@ class ViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        addButton.layer.cornerRadius = 10
     }
     
     func reloadData() {
@@ -40,35 +40,68 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func segAction(_ sender: Any) {
+        
+        reloadData()
+        
+        switch segument.selectedSegmentIndex {
+            
+        case 0 :
+            print("All")
+            reloadData()
+            
+        case 1 :
+            print("Nature")
+            self.arrayOfArticle =  arrayOfArticle.filter( { $0.category?.range(of: "Nature", options: .caseInsensitive) != nil})
+            
+        case 2 :
+            print("Fitness")
+            self.arrayOfArticle =  arrayOfArticle.filter( { $0.category?.range(of: "Fitness", options: .caseInsensitive) != nil})
+            
+        default:
+            print("iOS")
+            self.arrayOfArticle =  arrayOfArticle.filter( { $0.category?.range(of: "iOS", options: .caseInsensitive) != nil})
+            
+        }
+        
+        tableView.reloadData()
+        
+    }
     
-    
-    
-    
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ArticleViewController") as! ArticleViewController
+        
+        
+        vc.articleNameString = arrayOfArticle[indexPath.row].articlename!
+        
+        vc.categoryLabelString = arrayOfArticle[indexPath.row].category!
+        
+        vc.contentString = arrayOfArticle[indexPath.row].content!
 
-
+                self.present(vc, animated: true, completion: nil)
+        
+    }
+    
+    
+    
 }
 
 extension ViewController : UITableViewDelegate , UITableViewDataSource {
-
-    // Table View *****
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrayOfArticle.count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-      
-       let cellTableView = tableView.dequeueReusableCell(withIdentifier: "TableViewCellid" ) as! TableViewCell
+        
+        let cellTableView = tableView.dequeueReusableCell(withIdentifier: "TableViewCellid" ) as! TableViewCell
         
         cellTableView.text1TableView.text = arrayOfArticle[indexPath.row].articlename
         cellTableView.text2TableView.text = arrayOfArticle[indexPath.row].category
-//        cellTableView.text3TableView.text = arrayOfArticle[indexPath.row]./
 
-        
-        
-        
         return cellTableView
     }
-
+    
 }
