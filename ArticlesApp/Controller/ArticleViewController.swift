@@ -10,11 +10,8 @@ import UIKit
 class ArticleViewController: UIViewController {
 
     @IBOutlet weak var articleName: UILabel!
-    
     @IBOutlet weak var categoryLabel: UILabel!
-    
-    @IBOutlet weak var timeLabel: UILabel!
-    
+    @IBOutlet var mainView: UIView!
     @IBOutlet weak var articleContentTextView: UITextView!
     
     
@@ -25,21 +22,12 @@ class ArticleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
+        mainView.layer.cornerRadius = 15
         articleName.text = articleNameString
-        categoryLabel.text = categoryLabelString
+        categoryLabel.text = "#\(categoryLabelString)"
         articleContentTextView.text = contentString
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

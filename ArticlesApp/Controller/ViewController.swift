@@ -5,27 +5,27 @@ class ViewController: UIViewController {
     
     
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var segument: UISegmentedControl!
-    
-    
     @IBOutlet weak var addButton: UIButton!
-    
     
     var arrayOfArticle : [Article] = [Article]()
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
-        
+   
         super.viewDidLoad()
         
         reloadData()
+        
         tableView.delegate = self
         tableView.dataSource = self
         
-        addButton.layer.cornerRadius = 10
+        setUpUIDesigns()
+       
     }
+    
+  
     
     func reloadData() {
         
@@ -40,7 +40,7 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func segAction(_ sender: Any) {
+    @IBAction func filterSegmentAction(_ sender: Any) {
         
         reloadData()
         
@@ -68,6 +68,26 @@ class ViewController: UIViewController {
         
     }
     
+}
+
+extension ViewController : UITableViewDelegate , UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return arrayOfArticle.count
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cellTableView = tableView.dequeueReusableCell(withIdentifier: "TableViewCellid" ) as! TableViewCell
+        
+        cellTableView.text1TableView.text = arrayOfArticle[indexPath.row].articlename
+        cellTableView.text2TableView.text = arrayOfArticle[indexPath.row].category
+
+        return cellTableView
+    }
+    
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ArticleViewController") as! ArticleViewController
@@ -82,26 +102,21 @@ class ViewController: UIViewController {
                 self.present(vc, animated: true, completion: nil)
         
     }
-    
-    
-    
 }
 
-extension ViewController : UITableViewDelegate , UITableViewDataSource {
-    
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrayOfArticle.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cellTableView = tableView.dequeueReusableCell(withIdentifier: "TableViewCellid" ) as! TableViewCell
-        
-        cellTableView.text1TableView.text = arrayOfArticle[indexPath.row].articlename
-        cellTableView.text2TableView.text = arrayOfArticle[indexPath.row].category
 
-        return cellTableView
+
+extension ViewController {
+    
+    
+    func setUpUIDesigns()  {
+        
+        segument.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .selected)
+        
+        segument.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.blue], for: .normal)
+
+        addButton.layer.cornerRadius = 10
+        
     }
     
 }
