@@ -40,6 +40,16 @@ class ViewController: UIViewController {
         }
     }
     
+    func saveData() {
+        
+        do {
+            try context.save()
+         
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
     @IBAction func filterSegmentAction(_ sender: Any) {
         
         reloadData()
@@ -102,6 +112,15 @@ extension ViewController : UITableViewDelegate , UITableViewDataSource {
                 self.present(vc, animated: true, completion: nil)
         
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            context.delete(arrayOfArticle[indexPath.row])
+            arrayOfArticle.remove(at: indexPath.row)
+            self.tableView.reloadData()
+            saveData()
+        }
+    }
 }
 
 
@@ -115,7 +134,7 @@ extension ViewController {
         
         segument.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.blue], for: .normal)
 
-        addButton.layer.cornerRadius = 10
+        addButton.layer.cornerRadius = 15
         
     }
     
