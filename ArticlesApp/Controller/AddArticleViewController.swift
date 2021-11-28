@@ -18,6 +18,8 @@ class AddArticleViewController: UIViewController {
     @IBOutlet var segment: UISegmentedControl!
     
     
+    var myViewControllerRefrence : ViewController? = nil
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +28,7 @@ class AddArticleViewController: UIViewController {
         segment.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .selected)
         
         segment.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.blue], for: .normal)
-           
+        
     }
     
     
@@ -36,17 +38,22 @@ class AddArticleViewController: UIViewController {
         coreData.content = aritcleDetails
         coreData.articlename = articleName
         coreData.category = category
-        saveData()
+        //        saveData()
+        
+        
+        myViewControllerRefrence!.saveData()
+        
+        myViewControllerRefrence!.reloadData()
+        
+        myViewControllerRefrence!.tableView.reloadData()
+        
+        self.dismiss(animated: true, completion: nil)
     }
     
     func saveData() {
         
         do {
             try context.save()
-         
-            self.dismiss(animated: true, completion: nil)
-
-         
         } catch {
             
             let alert = UIAlertController(title: "Something went wrong", message: "sorry, We couldn't add the article", preferredStyle: .alert)
@@ -54,7 +61,7 @@ class AddArticleViewController: UIViewController {
             let action = UIAlertAction(title: "OK", style: .default)
             alert.addAction(action)
             
-        
+            
             
             self.present(alert, animated: true, completion: nil)
             
@@ -77,20 +84,16 @@ class AddArticleViewController: UIViewController {
                 convertSegmentValueToString(selectedSegementIndex: segment.selectedSegmentIndex)
                 
                 addData(articleName: name, aritcleDetails: content, category: Category(rawValue: segmentVluewString)!.rawValue)
-                
-                
-                
             }
-            
-            
         }
     }
+    
     
     
     func convertSegmentValueToString(selectedSegementIndex : Int) -> String {
         
         switch segment.selectedSegmentIndex {
-                
+            
         case 0 :
             return "Nature"
             
@@ -100,17 +103,7 @@ class AddArticleViewController: UIViewController {
         default:
             return "ios"
             
-            
         }
-        
     }
-    
-    
 }
-
-
-
-
-
-
 

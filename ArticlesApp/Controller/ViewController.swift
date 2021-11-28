@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
-   
+        
         super.viewDidLoad()
         
         reloadData()
@@ -22,10 +22,22 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         
         setUpUIDesigns()
-       
+        
     }
     
-  
+    
+    @IBAction func addArticleViewClick(_ sender: Any) {
+        
+        
+        let addArticleVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddArticleViewController") as! AddArticleViewController
+        
+        addArticleVC.myViewControllerRefrence = self
+        
+        
+        self.present(addArticleVC, animated: true, completion: nil)
+        
+        
+    }
     
     func reloadData() {
         
@@ -33,7 +45,8 @@ class ViewController: UIViewController {
         
         do {
             try arrayOfArticle = context.fetch(request)
-            tableView.reloadData()
+            //            self.tableView.reloadData()
+            
         } catch  {
             print(error)
             print("there is error with reload data ")
@@ -44,7 +57,7 @@ class ViewController: UIViewController {
         
         do {
             try context.save()
-         
+            
         } catch {
             print(error.localizedDescription)
         }
@@ -93,7 +106,7 @@ extension ViewController : UITableViewDelegate , UITableViewDataSource {
         
         cellTableView.text1TableView.text = arrayOfArticle[indexPath.row].articlename
         cellTableView.text2TableView.text = arrayOfArticle[indexPath.row].category
-
+        
         return cellTableView
     }
     
@@ -108,8 +121,10 @@ extension ViewController : UITableViewDelegate , UITableViewDataSource {
         vc.categoryLabelString = arrayOfArticle[indexPath.row].category!
         
         vc.contentString = arrayOfArticle[indexPath.row].content!
-
-                self.present(vc, animated: true, completion: nil)
+        
+        
+        
+        self.present(vc, animated: true, completion: nil)
         
     }
     
@@ -133,7 +148,7 @@ extension ViewController {
         segument.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .selected)
         
         segument.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.blue], for: .normal)
-
+        
         addButton.layer.cornerRadius = 15
         
     }

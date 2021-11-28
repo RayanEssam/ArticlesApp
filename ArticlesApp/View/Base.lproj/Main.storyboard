@@ -82,7 +82,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Add"/>
                                 <connections>
-                                    <segue destination="gly-M8-54o" kind="presentation" id="bRh-Mz-2E3"/>
+                                    <action selector="addArticleViewClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gMA-F1-X2O"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdl-Wl-FbV">
@@ -240,13 +240,13 @@
         <!--Add Article View Controller-->
         <scene sceneID="YpJ-zJ-9Nn">
             <objects>
-                <viewController id="gly-M8-54o" customClass="AddArticleViewController" customModule="ArticlesApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddArticleViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gly-M8-54o" customClass="AddArticleViewController" customModule="ArticlesApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7YT-lw-BgG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rOg-E7-cEu">
-                                <rect key="frame" x="20" y="30" width="255" height="748"/>
+                                <rect key="frame" x="20" y="30" width="255" height="802"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vrr-EU-eud">
                                         <rect key="frame" x="0.0" y="0.0" width="255" height="24"/>
@@ -258,7 +258,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="o05-vA-3JI">
-                                        <rect key="frame" x="0.0" y="49" width="255" height="32"/>
+                                        <rect key="frame" x="0.0" y="52.5" width="255" height="32"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="374" id="U4Z-fF-1Ql"/>
@@ -273,31 +273,31 @@
                                         <color key="selectedSegmentTintColor" red="0.25440835950000001" green="0.33030271529999999" blue="0.87063497300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7t4-xv-bPq">
-                                        <rect key="frame" x="0.0" y="104.5" width="255" height="30"/>
+                                        <rect key="frame" x="0.0" y="112" width="255" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                         <color key="textColor" red="0.25440835950000001" green="0.33030271529999999" blue="0.87063497300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="  example. Far far away. behind the." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bFp-ch-sHG">
-                                        <rect key="frame" x="0.0" y="159.5" width="255" height="74.5"/>
+                                        <rect key="frame" x="0.0" y="170" width="255" height="80.5"/>
                                         <color key="backgroundColor" red="0.9413606524" green="0.94867748019999998" blue="0.96863025430000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Article" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="orW-5D-b5L">
-                                        <rect key="frame" x="0.0" y="259" width="255" height="30"/>
+                                        <rect key="frame" x="0.0" y="278.5" width="255" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                         <color key="textColor" red="0.25440835950000001" green="0.33030271529999999" blue="0.87063497300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="  Enter your article here." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qp4-Ne-BdC">
-                                        <rect key="frame" x="0.0" y="313.5" width="255" height="374"/>
+                                        <rect key="frame" x="0.0" y="337" width="255" height="401"/>
                                         <color key="backgroundColor" red="0.9413606524" green="0.94867748019999998" blue="0.96863025430000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" spellCheckingType="yes" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HkT-RL-sAh">
-                                        <rect key="frame" x="0.0" y="712.5" width="255" height="35.5"/>
+                                        <rect key="frame" x="0.0" y="766.5" width="255" height="35.5"/>
                                         <color key="tintColor" red="0.25440835950000001" green="0.33030271529999999" blue="0.87063497300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Create">
