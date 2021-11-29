@@ -101,7 +101,6 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdl-Wl-FbV">
                                         <rect key="frame" x="0.0" y="0.0" width="83.5" height="36"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="83.5" id="Hld-gJ-MUo"/>
                                             <constraint firstAttribute="height" constant="36" id="kZH-1B-Aql"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
@@ -279,7 +278,7 @@
                                         <rect key="frame" x="0.0" y="52.5" width="374" height="32"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="374" id="U4Z-fF-1Ql"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="U4Z-fF-1Ql"/>
                                             <constraint firstAttribute="height" constant="31" id="gfT-bo-sDd"/>
                                         </constraints>
                                         <segments>
