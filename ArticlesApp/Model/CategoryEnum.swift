@@ -9,6 +9,6 @@
 enum Category: String {
     case Nature
     case Fitness
-    case ios
+    case iOS
   
 }

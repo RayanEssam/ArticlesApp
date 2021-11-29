@@ -83,7 +83,7 @@ class ViewController: UIViewController {
             
         default:
             print("iOS")
-            self.arrayOfArticle =  arrayOfArticle.filter( { $0.category == "ios"})
+            self.arrayOfArticle =  arrayOfArticle.filter( { $0.category == "iOS"})
             
         }
         

@@ -101,7 +101,7 @@ class AddArticleViewController: UIViewController {
             return "Fitness"
             
         default:
-            return "ios"
+            return "iOS"
             
         }
     }
