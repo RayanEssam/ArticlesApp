@@ -131,7 +131,7 @@ extension ViewController : UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             
-            let alert = UIAlertController(title: "Alert", message: "Do you want delete this item?", preferredStyle: .alert )
+            let alert = UIAlertController(title: "Delete Article", message: "Do you want delete this Article? \"\(self.arrayOfArticle[indexPath.row].articlename!)\"", preferredStyle: .alert )
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
             alert.addAction(UIAlertAction(title: "Delete", style: .default, handler: {_ in
                 
