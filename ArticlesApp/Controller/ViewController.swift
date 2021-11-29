@@ -75,15 +75,15 @@ class ViewController: UIViewController {
             
         case 1 :
             print("Nature")
-            self.arrayOfArticle =  arrayOfArticle.filter( { $0.category?.range(of: "Nature", options: .caseInsensitive) != nil})
+            self.arrayOfArticle =  arrayOfArticle.filter( { $0.category == "Nature"})
             
         case 2 :
             print("Fitness")
-            self.arrayOfArticle =  arrayOfArticle.filter( { $0.category?.range(of: "Fitness", options: .caseInsensitive) != nil})
+            self.arrayOfArticle =  arrayOfArticle.filter({ $0.category == "Fitness"})
             
         default:
             print("iOS")
-            self.arrayOfArticle =  arrayOfArticle.filter( { $0.category?.range(of: "iOS", options: .caseInsensitive) != nil})
+            self.arrayOfArticle =  arrayOfArticle.filter( { $0.category == "ios"})
             
         }
         
